@@ -1,0 +1,62 @@
+{
+    IBClasses = (
+        {
+            CLASS = AudioCDDocument; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {windowController = AudioCDWindowController; }; 
+            SUPERCLASS = NSDocument; 
+        }, 
+        {
+            ACTIONS = {
+                bulkPreEmphasisToggle = id; 
+                bulkPreGapChanged = id; 
+                discAddTrackRequest = id; 
+                discBurnRequest = id; 
+                discMCNChanged = id; 
+                discMCNToggle = id; 
+                discRemoveTrackRequest = id; 
+                singleTrackIndexPointsChanged = id; 
+                singleTrackIndexPointsToggle = id; 
+                singleTrackPreEmphasisToggle = id; 
+                singleTrackPreGapChanged = id; 
+                singleTrackShowFileRequest = id; 
+            }; 
+            CLASS = AudioCDWindowController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_buttonDiscAddTrack" = NSButton; 
+                "_buttonDiscBurn" = NSButton; 
+                "_buttonDiscRemoveTrack" = NSButton; 
+                "_buttonSingleTrackShowFile" = NSButton; 
+                "_checkboxBulkPreEmphasis" = NSButton; 
+                "_checkboxDiscMCN" = NSButton; 
+                "_checkboxSingleTrackISRC" = NSButton; 
+                "_checkboxSingleTrackIndexPoints" = NSButton; 
+                "_checkboxSingleTrackPreEmphasis" = NSButton; 
+                "_panelAdding" = NSPanel; 
+                "_progressAdding" = NSProgressIndicator; 
+                "_tableColumnFilename" = NSTableColumn; 
+                "_tableColumnLength" = NSTableColumn; 
+                "_tableColumnTrackNumber" = NSTableColumn; 
+                "_tableDiscTracks" = NSTableView; 
+                "_tabviewMainOptions" = NSTabView; 
+                "_tabviewTrackOptionsPersonality" = NSTabView; 
+                "_textAddingFilename" = NSTextField; 
+                "_textBulkPreGap" = NSTextField; 
+                "_textBulkPreGapSeconds" = NSTextField; 
+                "_textDiscLength" = NSTextField; 
+                "_textDiscMCN" = NSTextField; 
+                "_textDiscTrackCount" = NSTextField; 
+                "_textSingleTrackFilename" = NSTextField; 
+                "_textSingleTrackISRC" = NSTextField; 
+                "_textSingleTrackISRCInvalid" = NSTextField; 
+                "_textSingleTrackPreGap" = NSTextField; 
+                "_textSingleTrackPreGapSeconds" = NSTextField; 
+            }; 
+            SUPERCLASS = NSWindowController; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = TrackTable; LANGUAGE = ObjC; SUPERCLASS = NSTableView; }
+    ); 
+    IBVersion = 1; 
+}
