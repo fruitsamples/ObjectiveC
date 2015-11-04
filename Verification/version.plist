@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>BuildVersion</key>
-	<string>121</string>
+	<string>3</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
@@ -11,6 +11,6 @@
 	<key>ProjectName</key>
 	<string>DiscRecordingDevTools</string>
 	<key>SourceVersion</key>
-	<string>2080401</string>
+	<string>2090401</string>
 </dict>
 </plist>
