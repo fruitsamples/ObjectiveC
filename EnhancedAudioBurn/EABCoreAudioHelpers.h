@@ -1,22 +1,22 @@
 /*
-     File:       UDFController.h
+ File:       EABCoreAudioHelpers.h
  
-     Contains:   FSPropertyController subclass to handle the UDF filesystem.
+ Contains:   CoreAudio wrapper functions to help with audio file handling
  
-     Version:    Technology: Mac OS X
-                 Release:    Mac OS X
+ Version:    Technology: Mac OS X
+ Release:    Mac OS X
  
-     Copyright:  (c) 2004-2007 Apple Inc.  All Rights Reserved.
+ Copyright:  (c) 2006 by Apple Inc., all rights reserved
  
-     Bugs?:      For bug reports, consult the following page on
-                 the World Wide Web:
+ Bugs?:      For bug reports, consult the following page on
+ the World Wide Web:
  
-                     http://developer.apple.com/bugreporter/
-*/
+ http://developer.apple.com/bugreporter/
+ */
 /*
- File:  UDFController.h
+ File:  EABCoreAudioHelpers.h
  
- Copyright:  (c) 2004-2007 Apple Inc.  All Rights Reserved.
+ Copyright:  © Copyright 2006 Apple Inc. All rights reserved.
  
  Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple Inc.
  ("Apple") in consideration of your agreement to the following terms, and your
@@ -52,18 +52,12 @@
  OF THE APPLE SOFTWARE, HOWEVER CAUSED AND WHETHER UNDER THEORY OF CONTRACT, TORT
  (INCLUDING NEGLIGENCE), STRICT LIABILITY OR OTHERWISE, EVEN IF APPLE HAS BEEN
  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- */
+ */ 
 
-#import "FinderPropertiesController.h"
+#import <Foundation/Foundation.h>
+#import <AudioToolbox/AudioToolbox.h>
 
-@interface UDFController : FinderPropertiesController 
-{
-	IBOutlet NSButton*		invisible;
-	IBOutlet NSButton*		realtime;
-	IBOutlet NSTextField*	effectiveDate;
-	IBOutlet NSMatrix*		extendedUDFFlags;
-}
 
-- (void) updateDates;
-
-@end
+CFMutableDictionaryRef CAExtractCDTextFromAudioFile(CFStringRef inPathString);
+uint64_t CAGetLengthOfAudioFile(CFStringRef inPathString);
+OSStatus CreateAudioFileFromPath(CFStringRef inPathString, AudioFileID *outAudioFile);
